@@ -14,3 +14,8 @@ RUN apt-get update && \
 	echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
 	apt-get install -y oracle-java8-installer
 
+# Default to UTF-8 file.encoding
+ENV LANG C.UTF-8
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
